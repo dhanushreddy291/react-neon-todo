@@ -53,6 +53,10 @@ npm install
 3.  Select **Neon Auth** as the authentication provider and click **Enable**.
 4.  Toggle **Grant public schema access** to ON.
 
+    <p align="left">
+      <img src="./images/data_api_sidebar.png" alt="Enable Data API with Neon Auth" width="800"/>
+    </p>
+
 ### 3. Environment Variables
 
 Create a `.env` file in the root directory.
