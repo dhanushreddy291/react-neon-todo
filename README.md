@@ -33,7 +33,7 @@ Before you start, you'll need:
 1.  A **[Neon account](https://console.neon.tech)**.
 2.  **[Node.js](https://nodejs.org/)** (v18+) installed locally.
 
-### 1. Initial setup
+### Initial setup
 
 Clone this repository and install the dependencies.
 
@@ -46,18 +46,20 @@ cd react-neon-todo
 npm install
 ```
 
-### 2. Configure Neon
+### Configure Neon
 
 1.  Create a new project in the [Neon Console](https://console.neon.tech).
 2.  Navigate to the **Data API** page.
-3.  Select **Neon Auth** as the authentication provider and click **Enable**.
-4.  Toggle **Grant public schema access** to ON.
+3.  Ensure **Use Neon Auth** is selected.
+4.  Ensure **Grant public schema access** is enabled.
 
     <p align="left">
-      <img src="./images/data_api_sidebar.png" alt="Enable Data API with Neon Auth" width="800"/>
+      <img src="./images/data_api_sidebar_with_public_schema.png" alt="Enable Data API with Neon Auth" width="800"/>
     </p>
 
-### 3. Environment Variables
+5.  Click **Enable Data API** to activate the Data API for your project using Neon Auth.
+
+### Environment Variables
 
 Create a `.env` file in the root directory.
 
@@ -90,7 +92,7 @@ VITE_NEON_DATA_API_URL="https://ep-xxx.neon.tech/neondb/rest/v1"
 VITE_NEON_AUTH_URL="https://ep-xxx.neon.tech/neondb/auth"
 ```
 
-### 4. Database Setup
+### Database setup
 
 We use Drizzle ORM to push the schema and RLS policies to the database.
 
@@ -101,7 +103,7 @@ npx drizzle-kit migrate
 
 > This creates the `todos` table and applies the `crudPolicy` which enforces that users can only see their own data.
 
-### 5. Run the App
+### Run the application
 
 Start the development server.
 
